@@ -27,11 +27,32 @@ An advanced mathematical expression scanner and solver API inspired by Apple's n
 - Sharp (Image Processing)
 - Joi (Request Validation)
 
-## 📋 Prerequisites
-- Node.js (v14 or higher)
-- Google Cloud Account with Gemini API access
-- API key for Gemini AI
+## 📸 Supported Image Types
+- Handwritten mathematical expressions
+- Printed mathematical expressions
+- Geometric drawings
+- Mathematical diagrams
+- Abstract mathematical concepts
 
+## 🎯 Use Cases
+1. Educational Tools
+   - Solving homework problems
+   - Checking mathematical solutions
+   - Learning mathematical concepts
+
+2. Professional Applications
+   - Quick calculations from whiteboard photos
+   - Verifying mathematical workings
+   - Converting written math to digital format
+
+## ✨ Inspiration
+This project is inspired by Apple's innovative mathematical expression scanning feature introduced in iPadOS, which allows users to scan and solve mathematical problems directly from handwritten notes. Our implementation extends this concept by providing a robust API that can be integrated into various applications and platforms.
+
+## ⚠️ Limitations
+- Requires clear image quality for accurate recognition
+- Complex mathematical notations might need specific formatting
+- Processing time may vary based on image complexity
+- Dependent on Gemini AI API availability
 ## 🚀 Getting Started
 
 ### Installation
@@ -59,62 +80,3 @@ Development mode:
 ```bash
 npm run dev
 ```
-
-## 📝 API Usage
-
-### Endpoint: POST /calculate
-Process an image containing mathematical content.
-
-#### Request Body:
-```json
-{
-  "image": "base64_encoded_image_string",
-  "dict_of_vars": {
-    "x": 5,
-    "y": 10
-    // ... any predefined variables
-  }
-}
-```
-
-#### Response Format:
-```json
-{
-  "message": "Image processed",
-  "data": [
-    {
-      "expr": "2 + 3 * 4",
-      "result": 14,
-      "assign": false
-    }
-  ],
-  "status": "success"
-}
-```
-
-## 📸 Supported Image Types
-- Handwritten mathematical expressions
-- Printed mathematical expressions
-- Geometric drawings
-- Mathematical diagrams
-- Abstract mathematical concepts
-
-## 🎯 Use Cases
-1. Educational Tools
-   - Solving homework problems
-   - Checking mathematical solutions
-   - Learning mathematical concepts
-
-2. Professional Applications
-   - Quick calculations from whiteboard photos
-   - Verifying mathematical workings
-   - Converting written math to digital format
-
-## ✨ Inspiration
-This project is inspired by Apple's innovative mathematical expression scanning feature introduced in iPadOS, which allows users to scan and solve mathematical problems directly from handwritten notes. Our implementation extends this concept by providing a robust API that can be integrated into various applications and platforms.
-
-## ⚠️ Limitations
-- Requires clear image quality for accurate recognition
-- Complex mathematical notations might need specific formatting
-- Processing time may vary based on image complexity
-- Dependent on Gemini AI API availability
